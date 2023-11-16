@@ -1,12 +1,9 @@
-// função que faz o dowload do JSON //
-
+// função que faz o download do JSON //
 function ShowData() {
     const dataField = document.querySelector("#dataField");
 
     // pega os dados
-
     const data = localStorage.getItem('form');
-
     const json = JSON.parse(data);
 
     const username = json.username;
@@ -15,59 +12,51 @@ function ShowData() {
     const email = json.email;
     const password = json.password;
 
-    // cria os elementos
+    // cria os elementos //
     const nameP = document.createElement('p');
-    nameP.classList.add('p-margin')
-    nameP.classList.add('p')
+    nameP.classList.add('p-margin');
+    nameP.classList.add('p');
+
     const lastnameP = document.createElement('p');
-    lastnameP.classList.add('p')
+    lastnameP.classList.add('p');
     const ageP = document.createElement('p');
-    ageP.classList.add('p')
+    ageP.classList.add('p');
 
     const emailP = document.createElement('p');
-    emailP.classList.add('p')
+    emailP.classList.add('p');
 
     const passwordP = document.createElement('p');
-    passwordP.classList.add('p')
+    passwordP.classList.add('p');
 
-
-    // atribui dados aos elementos
-
+    // atribui dados aos elementos //
     nameP.innerText = `Nome de usuário: ${username}`;
     lastnameP.innerText = `Sobrenome do usuário: ${lastname}`;
     ageP.innerText = `Idade: ${age}`;
     emailP.innerText = `Email: ${email}`;
     passwordP.innerText = `Senha: ${password}`;
 
-    
-    // coloca os atributos no html
-
+    // coloca os atributos no html //
     dataField.appendChild(nameP);
     dataField.appendChild(lastnameP);
     dataField.appendChild(ageP);
     dataField.appendChild(emailP);
+    dataField.appendChild(passwordP);
 }
 
-function dowloadObjectAasJson(exportObj){
-    const localTexto = document.querySelector('#data');
-    const downloadBtn= document.createElement('a');
-    let dataStar = "data:text/json;chaeser=utf-8," + encodeURIComponent(exportObj);
+function downloadObjectAsJson(exportObj) {
+    const downloadBtn = document.createElement('a');
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportObj));
     downloadBtn.innerText = "Download json";
-    downloadBtn.setAttribute("href", dataStar);
-    downloadBtn.setAttribute("download", "meuArquivo.json");
-    //localTexto.appendChild(downloadBtn); // firefox 
+    downloadBtn.setAttribute("href", dataStr);
+    downloadBtn.setAttribute("download", "data.json.js");
     downloadBtn.click();
 }
 
 // salva o item no localStorage //
-
 const json = localStorage.getItem('form');
 
-console.log(json)
-// faz o download do arqivo//
-dowloadObjectAasJson(json);
-
-const obj = JSON.parse(json);
-
+// chama a função ShowData após obter os dados do localStorage
 ShowData();
 
+// faz o download do arquivo
+downloadObjectAsJson(json);

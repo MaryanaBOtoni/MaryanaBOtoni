@@ -72,12 +72,7 @@ if (lastnameValue === "") {
     lastnameValid = true;
 
   }
-
-
-
-//*end sobrenome*//
-
-
+  //*end sobrenome*//
 
   if (emailValue === "") {
     setErrorFor(email, "O email é obrigatório.");
@@ -91,8 +86,8 @@ if (lastnameValue === "") {
 //*Idade/
  if (ageValue === "") {
     setErrorFor(age, "A idade é obrigatória.");
-  } else if (ageValue.length > 100) {
-    setErrorFor(age, "A idade precisa ser até 100 .");
+  } else if (ageValue < 120 ) {
+    setErrorFor(age, "A idade precisa ser até 120 .");
   } else {
     setSuccessFor(age);
   }

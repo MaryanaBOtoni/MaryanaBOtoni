@@ -44,6 +44,18 @@ p {
 
 }
 
+.form-control {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
 @keyframes onimte-outline {
     from {
 
@@ -223,10 +235,9 @@ body{
 
 .header {
 color:  whitesmoke;
-padding: 25px;
+padding: 39px;
 margin-left: 41%;
 margin-top: 50px;
-background-color: ;
 height: 70px;
 width: 600px;
 }
@@ -236,17 +247,19 @@ width: 600px;
   width: 45%;
   margin-left: 29%;
   margin-top: 1%;
+  color: #8836a4;
 }
 
 .form-control{
-  margin-bottom: 1px;
+  margin-bottom: 5px;
   padding-bottom: 45px;
   position: relative;
 }
 
 .form-control label {
   display: inline-block;
-  margin-bottom: 5px;
+  margin-bottom: 5px ;
+  color:#d9499e
 }
 
 .form-control input{
@@ -255,7 +268,8 @@ width: 600px;
   border-radius: 10px;
   font-size: 15px;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
+  color:#7933a3;
 }
 
 .form-control i {
@@ -275,7 +289,7 @@ width: 600px;
 .form button{
   background-color: #7933a3;
   border: 2px solid #7933a3;
-  color: #fff;
+  color: #ffffff;
   font-size: 20px;
   width: 100%;
   border-radius: 10px;
@@ -304,6 +318,7 @@ width: 600px;
     visibility: visible;
     color: #e74c3c;
 }
+
 footer {
     margin-top: 80px;
     background-color: #7933a3;
