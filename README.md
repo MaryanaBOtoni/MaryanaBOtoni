@@ -1,7 +1,7 @@
 ## Olá! Eu sou a Mariana Botoni, seja bem-vindo. 👋
 
-- 😄 Hoje com 21 anos, recém formada em analise e desenvolvimento de sistemas
-- 🔭 Especialisando em Front-End
+- 😄 Hoje com 21 anos, recém formada em Análise e Desenvolvimento de Sistemas 🎓.
+- 🔭 Especializando-me em Front-End, com foco em criar interfaces modernas e eficientes com React e JavaScript 🚀.
 - 📫 Contate-me no e-mail : marianabotoni.com.br@gmail.com
 - ✨ 
 
